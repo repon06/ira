@@ -119,11 +119,13 @@ public class Kotik {
 
     public boolean chaseMouse() { //true или false
         System.out.println("The cat chase mouse.");
+        this.satiety--;
         return true;
     }
 
     public boolean walk() {  // true или false
         System.out.println("The cat took a walk.");
+        this.satiety--;
         return true;
     }
 
