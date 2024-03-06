@@ -146,7 +146,7 @@ public class Kotik {
 
     //будет принимать единицы сытости и название еды
     public boolean eat(int satiety, String food) {
-        System.out.println(String.format("Cat ate %s.", food));
+        System.out.println(String.format("Cat ate %s %s.", satiety, food));
         this.satiety += satiety;
         this.food = food;
         return true;
