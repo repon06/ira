@@ -131,7 +131,7 @@ public class Kotik {
 
     public boolean eat() { // если сытость = 0, выполняется.
         if (this.satiety <= 0)
-            return eat(1, "milk"); //todo: satiety ???
+            return eat((int) (Math.random() * 3), "milk"); //todo: satiety ???
         else
             return false;
     }
