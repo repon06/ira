@@ -89,18 +89,22 @@ public class Kotik {
             if (this.satiety <= 0) { //есть в самом методе eat
                 eat(3, "sausages");
             } else {
-                int action = (int) (Math.random() * 4 + 1);
-                switch (action) {
+                switch ((int) (Math.random() * 4 + 1)) { //new Random().nextInt(4) + 1
                     case 1:
                         play();
+                        break;
                     case 2:
                         sleep();
+                        break;
                     case 3:
                         chaseMouse();
+                        break;
                     case 4:
                         walk();
+                        break;
                     default:
                         eat();
+                        break;
                 }
             }
         }
