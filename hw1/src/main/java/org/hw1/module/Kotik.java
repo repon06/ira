@@ -1,10 +1,14 @@
+package org.hw1.module;
+
+import java.util.List;
+import java.util.Random;
+
 public class Kotik {
     private int age; // возраст
     private String name; //имя котика вывести на экран
     private int weight; //вес котика нужно вывести на экран
     private String meow; //организовать сравнение голосов разных котиков
     private int satiety; //показывает сытость котика, если = 0, то Котик не выполняет ни один метод, он только хочет есть public boolean eat ().
-    private String food; // названия еды для метода eat()
     static int count;  // статическая переменная отвечает за количество созданных экземпляров класса Котик. При создании применять инкремент i++
 
     public int getAge() {
@@ -47,97 +51,99 @@ public class Kotik {
         this.satiety = satiety;
     }
 
-    public String getFood() {
-        return food;
-    }
-
-    public void setFood(String food) {
-        this.food = food;
-    }
-
     public static int getCount() {
         return count;
     }
-
-/*    public static void setCount(int count) {
-        Kotik.count = count;
-    }*/
-
-
-    //public static void Application(){	}
 
     public Kotik() {
         count++;
     }
 
     public Kotik(int age, String name, int weight, String meow) {
-        this.age = age;
-        this.name = name;
-        this.weight = weight;
-        this.meow = meow;
+        setKotik(age, name, weight, meow);
         count++;
     }
 
-    public void setKotik(String name, int weight, String meow) {
-        this.name = name;
-        this.weight = weight;
-        this.meow = meow;
+    public void setKotik(int age, String name, int weight, String meow) {
+        setAge(age);
+        setName(name);
+        setWeight(weight);
+        setMeow(meow);
+        setSatiety(0); //default
     }
 
     public void liveAnotherDay() {
         for (int i = 0; i < 24; i++) {
-            if (this.satiety <= 0) { //есть в самом методе eat
-                eat(3, "sausages");
-            } else {
-                switch ((int) (Math.random() * 4 + 1)) { //new Random().nextInt(4) + 1
-                    case 1:
-                        play();
-                        break;
-                    case 2:
-                        sleep();
-                        break;
-                    case 3:
-                        chaseMouse();
-                        break;
-                    case 4:
-                        walk();
-                        break;
-                    default:
-                        eat();
-                        break;
-                }
+            switch ((int) (Math.random() * 4 + 1)) { //new Random().nextInt(4) + 1
+                case 1:
+                    play();
+                    break;
+                case 2:
+                    sleep();
+                    break;
+                case 3:
+                    chaseMouse();
+                    break;
+                case 4:
+                    walk();
+                    break;
+                default:
+                    eat();
+                    break;
             }
         }
     }
 
+    private boolean isHungry() {
+        return this.satiety <= 0;
+    }
 
     public boolean play() { // true или false, если Котик выполняет, то сытость уменьшается
-        this.satiety--;
-        return true;
+        System.out.println(getName() + " is playing.");
+        if (!isHungry()) {
+            this.satiety--;
+            return true;
+        } else {
+            eat();
+            return false;
+        }
     }
 
     public boolean sleep() { // true или false
-        System.out.println("The cat is sleeping.");
-        return true;
+        System.out.println(getName() + " is sleeping.");
+        if (!isHungry()) {
+            this.satiety--;
+            return true;
+        } else {
+            eat();
+            return false;
+        }
     }
 
     public boolean chaseMouse() { //true или false
-        System.out.println("The cat chase mouse.");
-        this.satiety--;
-        return true;
+        System.out.println(getName() + " chase mouse.");
+        if (!isHungry()) {
+            this.satiety--;
+            return true;
+        } else {
+            eat();
+            return false;
+        }
     }
 
     public boolean walk() {  // true или false
-        System.out.println("The cat took a walk.");
-        this.satiety--;
-        return true;
+        System.out.println(getName() + " took a walk.");
+        if (!isHungry()) {
+            this.satiety--;
+            return true;
+        } else {
+            eat();
+            return false;
+        }
     }
 
     public boolean eat() { // если сытость = 0, выполняется.
-        if (this.satiety <= 0)
-            return eat((int) (Math.random() * 3), "milk"); //todo: satiety ???
-        else
-            return false;
+        return eat(new Random().nextInt(3) + 1, List.of("milk", "sausages", "meat").get(new Random().nextInt(3)));
     }
 
     // будет принимать только количество условных единиц сытости и увеличивать на них соответствующую переменную экземпляра
@@ -152,7 +158,6 @@ public class Kotik {
     public boolean eat(int satiety, String food) {
         System.out.println(String.format("Cat ate %s %s.", satiety, food));
         this.satiety += satiety;
-        this.food = food;
         return true;
     }
 
