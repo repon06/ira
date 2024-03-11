@@ -151,7 +151,6 @@ public class Kotik {
         System.out.println("Cat ate.");
         this.satiety += satiety;
         return true;
-
     }
 
     //будет принимать единицы сытости и название еды
