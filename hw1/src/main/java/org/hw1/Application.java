@@ -15,6 +15,6 @@ public class Application {
         cat1.printCatInfo();
         cat1.printDiffMeow(cat2);
 
-        Kotik.printCatsCount();//Kotik.getCount();
+        Kotik.printCatsCount();
     }
 }

@@ -131,7 +131,7 @@ public class Kotik {
         }
     }
 
-    public boolean walk() {  // true или false
+    public boolean walk() {
         System.out.println(getName() + " took a walk.");
         if (!isHungry()) {
             this.satiety--;
