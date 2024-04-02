@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7dc29eed-457a-485e-8e56-985f3be1e9cc" name="Changes" comment="clean">
-      <change afterPath="$PROJECT_DIR$/hw2/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="7dc29eed-457a-485e-8e56-985f3be1e9cc" name="Changes" comment="hw2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw2/src/main/java/models/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw2/src/main/java/models/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw2/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw2/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +51,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Application.executor": "Run",
-    "Application.Main.executor": "Debug",
+    "Application.Main.executor": "Run",
     "Application.org.hw1.Application.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -207,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710170161758</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="hw2">
+      <option name="closed" value="true" />
+      <created>1712074029216</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712074029216</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -217,7 +226,8 @@
     <MESSAGE value="fix - clear code" />
     <MESSAGE value="reorganize" />
     <MESSAGE value="clean" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean" />
+    <MESSAGE value="hw2" />
+    <option name="LAST_COMMIT_MESSAGE" value="hw2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -239,7 +249,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/hw2/src/main/java/org/example/Main.java</url>
-          <line>66</line>
+          <line>67</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
