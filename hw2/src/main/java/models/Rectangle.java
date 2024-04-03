@@ -1,6 +1,6 @@
 package models;
 
-public class Rectangle extends Shape implements IShape {
+public class Rectangle implements IShape {
     private double dim1;
     private double dim2;
 

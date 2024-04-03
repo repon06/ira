@@ -1,6 +1,6 @@
 package models;
 
-public class Cube extends Shape implements IShape {
+public class Cube implements IShape {
     private double dim;
 
     public double getDim() {
